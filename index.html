@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>这是一个超厉害的成绩预测</title>
+  <link rel="stylesheet" href="../prd/styles/index.css" />
+</head>
+<body>
+  <div class="wp">
+    <div class="wp-inner">
+      <div class="page page1">
+        <!--<div class="js-animate" data-animate="bounce">bounce</div>-->
+        <video src="//www.w3schools.com/html/mov_bbb.mp4" class="test-vidio" id="test-vidio" autoplay   x5-playsinline="" playsinline="" webkit-playsinline="" ></video>
+      </div>
+      <div class="page page2">
+        <div class="js-animate" data-animate="slideDown">slideDown</div>
+      </div>
+      <div class="page page3">
+        <div class="js-animate" data-animate="slideLeft">slideLeft</div>
+      </div>
+      <div class="page page4">
+        <div class="js-animate" data-animate="hatch">hatch</div>
+      </div>
+    </div>
+  </div>
+  <script src="//shared.ydstatic.com/js/zepto/1.1.6.js"></script>
+
+  <script type="text/javascript" src="../prd/scripts/index.js"></script>
+  <script>
+    let bgAudio = document.getElementById('test-vidio')
+    bgAudio.play();
+    document.addEventListener("WeixinJSBridgeReady",function () {
+      bgAudio.play();
+    }, false);
+    // 其他应用在click/touch时触发播放
+    document.addEventListener('click', function () {
+      bgAudio.play()
+    })
+    document.addEventListener('touchstart', function () {
+      bgAudio.play()
+    })
+    $('.wp-inner').fullpage({
+      change: function (e) {
+        // 移除动画属性
+        $('.page').eq(e.cur).find('.js-animate').each(function () {
+          $(this).removeClass($(this).data('animate')).hide();
+        });
+      },
+      afterChange: function (e) {
+        // 添加动画属性
+        $('.page').eq(e.cur).find('.js-animate')
+          .each(function () {
+            $(this).addClass($(this).data('animate')).show();
+          });
+      }
+    });
+  </script>
+  <script src="//shared.ydstatic.com/js/ydk/ydk-1.4.4-min.js"></script>
+</body>
+</html>
