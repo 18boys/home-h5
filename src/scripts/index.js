@@ -11,24 +11,29 @@ var screenWidth = document.body.clientWidth,
   originWidth = 375,
   originHeight = 604;
 
-var Page = function() {
+var Page = function () {
   this.$body = $('.pageWrapper');
+  this.$page = $('.page');
   this.init();
 };
 
 
 Page.prototype = {
-  init: function() {
+  init: function () {
     this._reset();
     this._run();
   },
-  _reset: function() {
+  _reset: function () {
     // this.$body.css({
     //   '-webkit-transform': 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')',
     //   transform: 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')'
     // });
+    // this.$page.css({
+    //   width: screenWidth,
+    //   height: screenHeight,
+    // })
   },
-  _run: function(){
+  _run: function () {
   }
 };
 

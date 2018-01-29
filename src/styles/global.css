@@ -7,24 +7,24 @@
     overflow: hidden;            
 }
 .page{
-    font-size: 72px;
-    line-height: 320px;
-    text-align: center;
+    /*font-size: 72px;*/
+    /*line-height: 320px;*/
+    /*text-align: center;*/
 }
 .page1{
     /*background: red;*/
 }
 .page2{
-    background: yellow;
+    /*background: yellow;*/
 }
 .page3{
-    background: maroon;
+    /*background: maroon;*/
 }
 .page4{
-    background: green;
+    /*background: green;*/
 }
 .page5{
-    background: blue;
+    /*background: blue;*/
 }
 
 .test-vidio {
@@ -76,8 +76,13 @@
     margin-left: -9px;
     width: 19px;
     height: 12px;
-    background: url(img/arrow.png);
+    /*background: url(img/arrow.png);*/
     background-size: 100% 100%;
     -webkit-animation: start 1.5s infinite ease-in-out;
     animation: start 1.5s infinite ease-in-out;
+}
+
+
+.text-detail {
+    font-size: 12px;
 }
