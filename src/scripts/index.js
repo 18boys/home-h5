@@ -1,7 +1,7 @@
 /*[export]*/
 var FastClick = require('libs/fastclick');
-require('./libs/zeptofullpage');
-require('./libs/jsfullpage.js');
+// require('./libs/zeptofullpage');
+// require('./libs/jsfullpage.js');
 
 FastClick(document.body);
 
@@ -9,11 +9,10 @@ FastClick(document.body);
 var screenWidth = document.body.clientWidth,
   screenHeight = document.body.clientHeight,
   originWidth = 375,
-  originHeight = 604;
+  originHeight = 667;
 
 var Page = function () {
   this.$body = $('.pageWrapper');
-  this.$page = $('.page');
   this.init();
 };
 
@@ -24,14 +23,10 @@ Page.prototype = {
     this._run();
   },
   _reset: function () {
-    // this.$body.css({
-    //   '-webkit-transform': 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')',
-    //   transform: 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')'
-    // });
-    // this.$page.css({
-    //   width: screenWidth,
-    //   height: screenHeight,
-    // })
+    this.$body.css({
+      '-webkit-transform': 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')',
+      transform: 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')'
+    });
   },
   _run: function () {
   }
