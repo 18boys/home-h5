@@ -24,8 +24,6 @@ Page.prototype = {
   init: function () {
     this._reset();
     this._initHomePage();
-    this._initEvent();
-    this._run();
   },
   _reset: function () {
     this.$body.css({
@@ -33,34 +31,39 @@ Page.prototype = {
       transform: 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')'
     });
   },
-  _initEvent: function () {
-    var _this = this;
-    $(document).on('click', '.home .play-icon', function (e) {
-      // 隐藏掉 home
-      _this.$home.addClass('hide');
-      // 显示出来全屏播放页面
-      _this.$full_page.addClass('on').removeClass('hide');
-      var full_video = document.getElementById("full-vidio");
-      // 开始播放
-      full_video.play();
-      $(full_video).on('ended', function (e) {
-        _this._initSharePage();
-        _this.$full_page.addClass('hide');
-      })
-    })
-  },
-  _initSharePage() {
-    this.$share_page.addClass('on').removeClass('hide');
-  },
   _initHomePage() {
+    var _this = this;
     var bgAudio = document.getElementById('pre-vidio');
     enableInlineVideo(bgAudio);
     document.addEventListener("WeixinJSBridgeReady", function () {
       bgAudio.play();
     }, false);
+    $(document).on('click', '.home .play-icon', function (e) {
+      // 隐藏掉 home
+      _this.$home.addClass('hide').removeClass('on');
+      // 显示出来全屏播放页面
+      _this._initFullPage();
+    })
   },
-  _run: function () {
-  }
+  _initFullPage() {
+    var _this = this;
+    this.$full_page.addClass('on').removeClass('hide');
+    var full_video = document.getElementById("full-vidio");
+    // 开始播放
+    full_video.play();
+    $(full_video).on('ended', function (e) {
+      _this.$full_page.addClass('hide').removeClass('on');
+      _this._initSharePage();
+    })
+  },
+  _initSharePage() {
+    var _this = this;
+    this.$share_page.addClass('on').removeClass('hide');
+    $(document).on('click', '.share-page .repeat-button', function (e) {
+      _this.$share_page.addClass('hide').removeClass('on');
+      _this._initFullPage();
+    })
+  },
 };
 
 new Page();
