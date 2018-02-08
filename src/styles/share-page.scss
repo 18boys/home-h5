@@ -1,0 +1,50 @@
+.share-page {
+  background: url("//shared.ydstatic.com/dict/market/cetResultPredict/imgs/load-bg.jpg") no-repeat;
+  background-size: cover;
+  .font-style {
+    position: absolute;
+    width: 100%;
+    color: #7d8011;
+    font-size: 0.14rem;
+  }
+  .title {
+    top: 0.8rem;
+  }
+  .title1 {
+    top: 1.2rem;
+  }
+  .title2 {
+    top: 1.5rem;
+  }
+  .title3 {
+    top: 2.0rem;
+  }
+  .title4 {
+    top: 2.8rem;
+  }
+  .conments {
+    margin: 1rem;
+  }
+  .buttons {
+    margin-top: 4rem;
+    position: relative;
+    .button {
+      height: 0.3rem;
+      width: 0.8rem;
+      background: #1f5cff;
+      text-align: center;
+      border-radius: 0.05rem;
+      line-height: 0.3rem;
+    }
+    .repeat-button {
+      position: absolute;
+      left: 0.8rem;
+    }
+    .share-button {
+      position: absolute;
+      right: 0.8rem;
+    }
+  }
+}
+
+

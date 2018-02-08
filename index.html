@@ -11,14 +11,42 @@
 <div class='pageWrapper'>
   <div class='page home'>
     <video
-        autoplay
         loop
         class="pre-vidio"
         id="pre-vidio"
+        src="video/test1.mov"
+        playsinline
+    >
+    </video>
+    <p class="title font-style">-春节前夕-</p>
+    <p class="title-detail font-style">我们采访了<br>独自在北京打拼的人</p>
+    <p class="content font-style">他们的故事<br />也许就是你的故事<br>
+      <img src="img/play.png" class="play-icon">
+    </p>
+  </div>
+  <div class='page full-page hide'>
+    <video
+        preload="auto"
+        class="full-video"
+        id="full-vidio"
+        playsinline
         src="video/test1.mov">
     </video>
-    <div class="font-sf">我爱中国</div>
   </div>
+  <div class='page share-page hide'>
+    <div class="conments">
+      <p class="title font-style">要抱抱</p>
+      <p class="title1 font-style">我就是这个傲娇,宝宝不哭</p>
+      <p class="title2 font-style">哈哈,要哭哭哭</p>
+      <p class="title4 font-style">我们要多陪陪父母,欧耶呃呃呃呃呃呃</p>
+    </div>
+    <div class="buttons">
+      <div class="button repeat-button">重新播放</div>
+      <div class="button share-button">聊聊你的股市</div>
+    </div>
+
+  </div>
+
 </div>
 
 <!--lib-->
@@ -30,18 +58,18 @@
 
 <!--首页视频播放相关-->
 <script>
-  let bgAudio = document.getElementById('pre-vidio')
-  bgAudio.play();
-  document.addEventListener("WeixinJSBridgeReady", function () {
-    bgAudio.play();
-  }, false);
+  //  let bgAudio = document.getElementById('pre-vidio');
+  ////  bgAudio.play();
+  //  document.addEventListener("WeixinJSBridgeReady", function () {
+  //    bgAudio.play();
+  //  }, false);
   // 其他应用在click/touch时触发播放
-  document.addEventListener('click', function () {
-    bgAudio.play()
-  })
-  document.addEventListener('touchstart', function () {
-    bgAudio.play()
-  })
+  //  document.addEventListener('click', function () {
+  //    bgAudio.play()
+  //  })
+  //  document.addEventListener('touchstart', function () {
+  //    bgAudio.play()
+  //  })
 </script>
 
 <!--分享-->
