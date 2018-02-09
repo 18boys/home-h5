@@ -5,21 +5,25 @@
   <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>芒果快跑啊</title>
-  <link rel="stylesheet" href="./dev/styles/index@dev.css" />
+  <link rel="stylesheet" href="./prd/styles/index@dev.css" />
 </head>
 
 <div class='pageWrapper'>
   <div class='page home'>
     <video
+        poster="/img/home.jpg"
+        src="/video/test1.mov"
+        muted
         loop
         class="pre-vidio"
         id="pre-vidio"
-        src="video/test1.mov"
         playsinline
+        webkit-playsinline
     >
     </video>
-    <p class="title font-style">-春节前夕-</p>
-    <p class="title-detail font-style">我们采访了<br>独自在北京打拼的人</p>
+    <p class="title1 font-style">春节前夕</p>
+    <p class="title2 font-style">我们采访了5个</p>
+    <p class="title3 font-style">独自在北京打拼的人</p>
     <p class="content font-style">他们的故事<br />也许就是你的故事<br>
       <img src="img/play.png" class="play-icon">
     </p>
@@ -29,50 +33,57 @@
         preload="auto"
         class="full-video"
         id="full-vidio"
+        src="video/test1.mov"
         playsinline
-        src="video/test1.mov">
+        poster="/img/home.jpg"
+        webkit-playsinline
+    >
     </video>
   </div>
-  <div class='page share-page hide'>
+  <div class='page comment-page hide'>
     <div class="conments">
-      <p class="title font-style">要抱抱</p>
-      <p class="title1 font-style">我就是这个傲娇,宝宝不哭</p>
-      <p class="title2 font-style">哈哈,要哭哭哭</p>
-      <p class="title4 font-style">我们要多陪陪父母,欧耶呃呃呃呃呃呃</p>
+      <p class="title font-style">“外出求学7年，定居北京，感谢他们对我教育 的重视和付出，让我有机会看到更大的世界。这 会儿刚回到老家，爸妈正在厨房里忙着给我。”</p>
+      <p class="title1 font-style">“父母让你接受好的教育，本来就不是为了把你 留在身边的。”</p>
+      <p class="title2 font-style">“为什么回不去？常回家看看啊！马上我就回家 过年啦！”</p>
+      <p class="title4 font-style">“想哭。在父母眼中，孩子的教育，真的是值得 一辈子付出的事。”</p>
+      <p class="title4 font-style">“深有感触。我妈小学文凭，汉字都识不全，结 果有天放学回家，发现她竟然偷偷把我英语课本 后面的单词都抄了一遍，给我做成了每日。”</p>
     </div>
     <div class="buttons">
       <div class="button repeat-button">重新播放</div>
       <div class="button share-button">聊聊你的故事</div>
     </div>
-
+  </div>
+  <div class='page share-page hide'>
+    <img src="/img/share-point.png" class="share-img">
   </div>
 
 </div>
 
 <!--lib-->
 <script src="//shared.ydstatic.com/js/zepto/1.1.6.js"></script>
-<script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
 <!--业务 js-->
-<script type="text/javascript" src="./dev/scripts/index@dev.js"></script>
-
-<!--首页视频播放相关-->
-<script>
-  //  let bgAudio = document.getElementById('pre-vidio');
-  ////  bgAudio.play();
-  //  document.addEventListener("WeixinJSBridgeReady", function () {
-  //    bgAudio.play();
-  //  }, false);
-  // 其他应用在click/touch时触发播放
-  //  document.addEventListener('click', function () {
-  //    bgAudio.play()
-  //  })
-  //  document.addEventListener('touchstart', function () {
-  //    bgAudio.play()
-  //  })
-</script>
+<script type="text/javascript" src="./prd/scripts/index@dev.js"></script>
 
 <!--分享-->
 <script src="//shared.ydstatic.com/js/ydk/ydk-1.4.4-min.js"></script>
+<script>
+  ydk.config({
+    debug: false,
+    jsApiList: ['checkJsApi', 'share']
+  });
+  ydk.share({
+    type: 'wechat',
+    title: '【有道考神】这是一个超厉害的四六级成绩预测',
+    desc: '勇士来！闯关自测考试成绩，我就不信有人能见到公主',
+    imgUrl: 'http://' + location.host + '/img/home.jpg',
+    link: location.href,
+    shift: true,
+    success: function () {
+      $('.share-page').addClass('hide').removeClass('on')
+    }
+  })
+</script>
+
 </body>
 </html>

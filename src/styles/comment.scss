@@ -1,0 +1,45 @@
+.comment-page {
+  background: url("/img/comment.jpg") no-repeat;
+  background-size: cover;
+  font-family: 'H35';
+  .font-style {
+    color: #745a2d;
+    font-size: 0.11rem;
+    margin-top: 0.2rem;
+    letter-spacing: 0.02rem;
+    line-height: 0.20rem;
+    font-weight: 600;
+  }
+  .conments {
+    position: absolute;
+    top: 0.80rem;
+    left: 0.58rem;
+    right: 0.58rem;
+  }
+  .buttons {
+    margin-top: 5rem;
+    position: relative;
+    .button {
+      height: 0.50rem;
+      width: 1.44rem;
+      text-align: center;
+      border-radius: 0.25rem;
+      line-height: 0.5rem;
+      color: #a98442;
+      font-weight: 600;
+      font-size: 0.16rem;
+      border: #a98442 0.01rem solid;
+      letter-spacing: 0.02rem;
+    }
+    .repeat-button {
+      position: absolute;
+      left: 0.27rem;
+    }
+    .share-button {
+      position: absolute;
+      right: 0.27rem;
+    }
+  }
+}
+
+

@@ -1,12 +1,15 @@
 
 @font-face {
-  font-family: 'SFPro';
-  src: url('//www.apple.com/wss/fonts/SF-Pro-Display/v1/sf-pro-display_regular.woff2');
+  font-family: 'H35';
+  src: url('/font/HYQiHeiX4-35J.ttf');
+}
+@font-face {
+  font-family: 'H55';
+  src: url('/font/HYQiHeiX4-55J.ttf');
 }
 
 html {
   font-size: 100px;
-  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;;
 }
 
 .pageWrapper {
@@ -33,6 +36,11 @@ html {
 .show {
   display: block;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
 
 .IIV::-webkit-media-controls-play-button,
 .IIV::-webkit-media-controls-start-playback-button {
