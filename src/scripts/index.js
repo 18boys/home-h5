@@ -39,7 +39,14 @@ Page.prototype = {
     document.addEventListener("WeixinJSBridgeReady", function () {
       bgAudio.play();
     }, false);
+    document.addEventListener('click', function () {
+      bgAudio.play()
+    })
+    document.addEventListener('touchstart', function () {
+      bgAudio.play()
+    })
     $(document).on('click', '.home .play-icon', function (e) {
+      bgAudio = null;
       // 显示出来全屏播放页面
       _this._initFullPage();
       // 隐藏掉 home
