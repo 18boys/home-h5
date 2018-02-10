@@ -1,7 +1,5 @@
 /*[export]*/
 var FastClick = require('libs/fastclick');
-// require('./libs/zeptofullpage');
-// require('./libs/jsfullpage.js');
 var enableInlineVideo = require('libs/iphone-inline-video');
 FastClick(document.body);
 
@@ -31,7 +29,7 @@ Page.prototype = {
       transform: 'scaleX(' + screenWidth / originWidth + ') scaleY(' + screenHeight / originHeight + ')'
     });
   },
-  _initHomePage() {
+  _initHomePage: function () {
     var _this = this;
     var bgAudio = document.getElementById('pre-vidio');
     enableInlineVideo(bgAudio);
@@ -49,11 +47,12 @@ Page.prototype = {
       bgAudio = null;
       // 显示出来全屏播放页面
       _this._initFullPage();
+      // _this._initCommentPage();
       // 隐藏掉 home
       _this.$home.addClass('hide').removeClass('on');
     })
   },
-  _initFullPage() {
+  _initFullPage: function () {
     var _this = this;
     this.$full_page.addClass('on').removeClass('hide');
     var full_video = document.getElementById("full-vidio");
@@ -65,7 +64,7 @@ Page.prototype = {
       _this.$full_page.addClass('hide').removeClass('on');
     })
   },
-  _initCommentPage() {
+  _initCommentPage: function () {
     var _this = this;
     this.$comment_page.addClass('on').removeClass('hide');
     $(document).on('click', '.comment-page .repeat-button', function (e) {
@@ -76,7 +75,7 @@ Page.prototype = {
       _this._initSharePage();
     })
   },
-  _initSharePage() {
+  _initSharePage: function () {
     this.$share_page.addClass('on').removeClass('hide');
   },
 };
