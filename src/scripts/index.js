@@ -6,7 +6,7 @@ FastClick(document.body);
 var screenWidth = document.body.clientWidth,
   screenHeight = document.body.clientHeight,
   originWidth = 375,
-  originHeight = 667;
+  originHeight = 604;
 
 var Page = function () {
   this.$body = $('.pageWrapper');
@@ -31,20 +31,20 @@ Page.prototype = {
   },
   _initHomePage: function () {
     var _this = this;
-    var bgAudio = document.getElementById('pre-vidio');
-    enableInlineVideo(bgAudio);
-    bgAudio.play();
-    document.addEventListener("WeixinJSBridgeReady", function () {
-      bgAudio.play();
-    }, false);
-    document.addEventListener('click', function () {
-      bgAudio.play()
-    })
-    document.addEventListener('touchstart', function () {
-      bgAudio.play()
-    })
+    // var bgAudio = document.getElementById('pre-vidio');
+    // enableInlineVideo(bgAudio);
+    // bgAudio.play();
+    // document.addEventListener("WeixinJSBridgeReady", function () {
+    //   bgAudio.play();
+    // }, false);
+    // document.addEventListener('click', function () {
+    //   bgAudio.play()
+    // })
+    // document.addEventListener('touchstart', function () {
+    //   bgAudio.play()
+    // })
     $(document).on('click', '.home .play-icon', function (e) {
-      bgAudio = null;
+      // bgAudio = null;
       // 显示出来全屏播放页面
       _this._initFullPage();
       // _this._initCommentPage();
@@ -77,6 +77,9 @@ Page.prototype = {
   },
   _initSharePage: function () {
     this.$share_page.addClass('on').removeClass('hide');
+    $(document).on('click', '.share-page', function (e) {
+      $('.share-page').addClass('hide').removeClass('on')
+    })
   },
 };
 

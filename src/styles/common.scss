@@ -1,11 +1,11 @@
-
 @font-face {
   font-family: 'H35';
-  src: url('/font/HYQiHeiX4-35J.ttf');
+  src: url('/font/fang.ttf');
 }
+
 @font-face {
   font-family: 'H55';
-  src: url('/font/HYQiHeiX4-55J.ttf');
+  src: url('/font/fang.ttf');
 }
 
 html {
@@ -14,14 +14,14 @@ html {
 
 .pageWrapper {
   width: 3.75rem;
-  height: 6.67rem;
+  height: 6.04rem;
   transform-origin: top left;
   .page {
     position: absolute;
     top: 0;
     left: 0;
-    bottom:0;
-    right:0;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -29,24 +29,31 @@ html {
   font-family: 'SFPro';
 }
 
+//.hide {
+//  visibility: hidden;
+//}
+//
+//.show {
+//  visibility: visible;
+//}
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 .show {
-  visibility: visible;
+  display: block;
 }
 
 .hidden {
   visibility: hidden;
 }
 
-
-.IIV::-webkit-media-controls-play-button,
-.IIV::-webkit-media-controls-start-playback-button {
-  opacity: 0;
-  pointer-events: none;
-  width: 5px;
-}
+//
+//.IIV::-webkit-media-controls-play-button,
+//.IIV::-webkit-media-controls-start-playback-button {
+//  opacity: 0;
+//  pointer-events: none;
+//  width: 5px;
+//}
 
 

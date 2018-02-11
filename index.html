@@ -4,32 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>一个关于亲情和教育的采访</title>
-  <link rel="stylesheet" href="./prd/styles/index@5283c08d7af46d089b47caf4fc002945.css" />
+  <title>有道精品课</title>
+  <link rel="stylesheet" href="./prd/styles/index@c5bd35ad2214036a3a7c19f73300f0ea.css" />
 </head>
 
 <div class='pageWrapper'>
   <div class='page home'>
-    <video
-        poster="/img/home-pre.jpeg"
-        src="/video/pre.mov"
-        muted
-        loop
-        class="pre-vidio"
-        id="pre-vidio"
-        playsinline
-        preload="auto"
-        webkit-playsinline
-        x5-playsinline
-        x5-video-player-type="h5"
-        x5-video-player-fullscreen="true"
-    >
-    </video>
+    <!--<video-->
+        <!--poster="/img/home-little.jpg"-->
+        <!--src="/video/home-pre.mp4"-->
+        <!--muted-->
+        <!--loop-->
+        <!--class="pre-vidio"-->
+        <!--id="pre-vidio"-->
+        <!--playsinline-->
+        <!--preload="auto"-->
+        <!--webkit-playsinline-->
+        <!--x5-playsinline-->
+        <!--x5-video-player-type="h5"-->
+        <!--x5-video-player-fullscreen="true"-->
+    <!--&gt;-->
+    <!--</video>-->
     <p class="title1 font-style">春节前夕</p>
     <p class="title2 font-style">我们采访了5个</p>
     <p class="title3 font-style">独自在北京打拼的人</p>
     <p class="content font-style">他们的故事<br />也许就是你的故事<br>
-      <img src="img/play.png" class="play-icon">
+      <img src="img/play-white.png" class="play-icon">
     </p>
   </div>
   <div class='page full-page hide'>
@@ -37,9 +37,10 @@
         preload="auto"
         class="full-video"
         id="full-vidio"
-        src="video/full.mov"
+        src="video/full-f.mp4"
         playsinline
-        poster="/img/home-pre.jpeg"
+        controls
+        poster="/img/full-pre.png"
         webkit-playsinline
         x5-playsinline
     >
@@ -48,18 +49,18 @@
   <div class='page comment-page hide'>
     <div class="conments">
       <p class="title font-style">
-        “深有感触。我妈小学文凭，对英语一窍不通，结果有天放学回家，发现她竟然偷偷把我英语书后面的单词都抄了一遍，给我做成了每日背诵的小卡片。”      </p>
+        “爸妈文化都不高，但他们说的最多的话就是：你只要想上就供你一直读下去。”
       <p class="title1 font-style">
-        “12000公里，坐标多伦多，快过年了，想家。“
+      “刚从北京回老家，想好好抱抱父母。”
       </p>
       <p class="title2 font-style">
-        “为什么回不去？常回家看看啊！”
-      </p>
-      <p class="title4 font-style">
-        “外出求学7年，定居北京，感谢他们对我教育的重视和付出，让我看到更大的世界。这会儿刚回到老家，爸妈在厨房里忙着准备年货，好好珍惜相聚的时光！”      </p>
-      <p class="title4 font-style">
         “父母让你接受好的教育，本来就不是为了把你留在身边的。”
       </p>
+      <!--<p class="title4 font-style">-->
+        <!--“外出求学7年，定居北京，感谢他们对我教育的重视和付出，让我看到更大的世界。这会儿刚回到老家，爸妈在厨房里忙着准备年货，好好珍惜相聚的时光！”      </p>-->
+      <!--<p class="title4 font-style">-->
+        <!--“父母让你接受好的教育，本来就不是为了把你留在身边的。”-->
+      <!--</p>-->
     </div>
     <div class="buttons">
       <div class="button repeat-button">重新播放</div>
@@ -76,7 +77,7 @@
 <script src="//shared.ydstatic.com/js/zepto/1.1.6.js"></script>
 
 <!--业务 js-->
-<script type="text/javascript" src="./prd/scripts/index@a6abf0510313dc736588e47808698121.js"></script>
+<script type="text/javascript" src="./prd/scripts/index@26ce3bdc46707d1e56c919ceeb406548.js"></script>
 
 <!--分享-->
 <script src="//shared.ydstatic.com/js/ydk/ydk-1.4.4-min.js"></script>
@@ -87,9 +88,9 @@
   });
   ydk.share({
     type: 'wechat',
-    title: '我妈一辈子送我到北京上学，我却一辈子回不去了',
-    desc: '我妈一辈子送我到北京上学，我却一辈子回不去了',
-    imgUrl: 'http://' + location.host + '/img/home-pre.jpeg',
+    title: '我妈一辈子供我到北京上学，我却一辈子回不去了',
+    desc: '我妈一辈子供我到北京上学，我却一辈子回不去了',
+    imgUrl: 'http://' + location.host + '/img/home-hand.jpeg',
     link: location.href,
     shift: true,
     success: function () {

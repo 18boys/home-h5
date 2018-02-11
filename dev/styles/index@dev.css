@@ -1,0 +1,229 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  font-size: 12px;
+  line-height: 1;
+  font-family: arial, "Hiragino Sans GB";
+  background: #f5f7f9;
+  overflow: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+@font-face {
+  font-family: 'H35';
+  src: url("/font/HYQiHeiX4-35J.ttf");
+}
+
+@font-face {
+  font-family: 'H55';
+  src: url("/font/HYQiHeiX4-55J.ttf");
+}
+
+html {
+  font-size: 100px;
+}
+
+.pageWrapper {
+  width: 3.75rem;
+  height: 6.67rem;
+  transform-origin: top left;
+}
+
+.pageWrapper .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.font-sf {
+  font-family: 'SFPro';
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+  opacity: 0;
+  pointer-events: none;
+  width: 5px;
+}
+
+.home {
+  background: url("/img/home.jpg") no-repeat;
+  background-size: cover;
+  font-family: 'H55';
+}
+
+.home .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.home .pre-vidio {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.home .font-style {
+  position: absolute;
+  text-align: center;
+  font-size: 0.24rem;
+  width: 100%;
+  color: #6a552f;
+  letter-spacing: 0.02rem;
+}
+
+.home .title1 {
+  top: 0.6rem;
+}
+
+.home .title2 {
+  top: 1.05rem;
+}
+
+.home .title3 {
+  top: 1.50rem;
+}
+
+.home .content {
+  top: 4.8rem;
+  font-size: 0.19rem;
+  line-height: 0.34rem;
+  letter-spacing: 0.05rem;
+}
+
+.home .play-icon {
+  width: 0.4rem;
+}
+
+.full-page .full-video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.comment-page {
+  background: url("/img/comment.jpg") no-repeat;
+  background-size: cover;
+  font-family: 'H35';
+}
+
+.comment-page .font-style {
+  color: #745a2d;
+  font-size: 0.11rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.02rem;
+  line-height: 0.20rem;
+  font-weight: 600;
+}
+
+.comment-page .conments {
+  position: absolute;
+  top: 0.80rem;
+  left: 0.58rem;
+  right: 0.58rem;
+}
+
+.comment-page .buttons {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.comment-page .buttons .button {
+  height: 0.50rem;
+  width: 1.44rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  line-height: 0.5rem;
+  color: #a98442;
+  font-weight: 600;
+  font-size: 0.16rem;
+  border: #a98442 0.01rem solid;
+  letter-spacing: 0.02rem;
+}
+
+.comment-page .buttons .repeat-button {
+  position: absolute;
+  left: 0.27rem;
+}
+
+.comment-page .buttons .share-button {
+  position: absolute;
+  right: 0.27rem;
+}
+
+.share-page {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.share-page .share-img {
+  width: 2rem;
+  position: absolute;
+  right: 0.17rem;
+  top: 0.4rem;
+}

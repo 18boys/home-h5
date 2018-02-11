@@ -1,23 +1,23 @@
 .comment-page {
-  background: url("/img/comment.jpg") no-repeat;
+  background: url("/img/comment.jpg") no-repeat 5%;
   background-size: cover;
   font-family: 'H35';
   .font-style {
     color: #745a2d;
-    font-size: 0.11rem;
+    font-size: 0.16rem;
     margin-top: 0.2rem;
-    letter-spacing: 0.02rem;
-    line-height: 0.20rem;
-    font-weight: 600;
+    letter-spacing: 0.03rem;
+    line-height: 0.28rem;
+    //font-weight: 600;
   }
   .conments {
     position: absolute;
-    top: 0.80rem;
+    top: 0.60rem;
     left: 0.58rem;
     right: 0.58rem;
   }
   .buttons {
-    margin-top: 5rem;
+    margin-top: 4.8rem;
     position: relative;
     .button {
       height: 0.50rem;

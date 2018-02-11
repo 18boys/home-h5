@@ -1,5 +1,5 @@
 .home {
-  background: url("/img/home-pre.jpeg") no-repeat;
+  background: url("/img/home-hand.jpeg") no-repeat;
   background-size: cover;
   font-family: 'H55';
   .mask {
@@ -18,7 +18,8 @@
     text-align: center;
     font-size: 0.24rem;
     width: 100%;
-    color: #6a552f;
+    color: #fff;
+    //color: #6a552f;
     letter-spacing: 0.02rem;
   }
   .title1 {
@@ -31,7 +32,7 @@
     top: 1.50rem;
   }
   .content {
-    top: 4.8rem;
+    top: 4rem;
     font-size: 0.19rem;
     line-height: 0.34rem;
     letter-spacing: 0.05rem;
