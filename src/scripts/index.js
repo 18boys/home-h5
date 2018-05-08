@@ -76,9 +76,9 @@ Page.prototype = {
     })
   },
   _initSharePage: function () {
-    this.$share_page.addClass('on').removeClass('hide');
+    this.$share_page.addClass('visibility').removeClass('hidden');
     $(document).on('click', '.share-page', function (e) {
-      $('.share-page').addClass('hide').removeClass('on')
+      $('.share-page').addClass('hidden').removeClass('visibility')
     })
   },
 };

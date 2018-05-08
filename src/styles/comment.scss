@@ -1,13 +1,14 @@
 .comment-page {
-  background: url("/img/comment.jpg") no-repeat 5%;
+  background: url("//shared.youdao.com/dict/market/20180211letter/img/comment.jpg") no-repeat 5%;
   background-size: cover;
   font-family: 'H35';
   .font-style {
     color: #745a2d;
-    font-size: 0.16rem;
+    font-size: 0.14rem;
     margin-top: 0.2rem;
     letter-spacing: 0.03rem;
-    line-height: 0.28rem;
+    line-height: 0.35rem;
+    text-align:justify
     //font-weight: 600;
   }
   .conments {
